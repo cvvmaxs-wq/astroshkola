@@ -1,0 +1,8 @@
+# локальное
+.claude/
+screens/
+__pycache__/
+*.pyc
+# рендер 2-й страницы PDF — реальная карта ребёнка, не публиковать
+src/pdf_p2.jpg
+src/astroshkola-artifact.html

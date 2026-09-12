@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASTROшкола — навчальний потенціал дитини · персональна натальна карта у PDF</title>
+<meta name="description" content="Персональна натальна карта дитини у PDF: як їй вчитися, з ким дружити і які здібності розвивати. До 20 сторінок, індивідуальний розрахунок, на пошту протягом 24 годин.">
+<meta property="og:title" content="ASTROшкола — навчальний потенціал дитини">
+<meta property="og:description" content="У вашої дитини вже є її вроджена інструкція. Просто ви ще її не читали.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230B2D42'/%3E%3Ccircle cx='32' cy='32' r='11' fill='%23C9A55A'/%3E%3Ccircle cx='47' cy='19' r='3' fill='%23C9A55A'/%3E%3Ccircle cx='18' cy='44' r='2' fill='%23C9A55A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F7F3EC; --cream-2:#EFE8DD; --cream-3:#E6DCCB;
+  --sky:#DCE7F2; --sky-2:#C7D8E9; --sky-3:#AFC6DD;
+  --ink:#1B2631; --ink-2:#33414F; --muted:#66727F;
+  --line:rgba(27,38,49,.12);
+  --teal:#0B2D42; --teal-2:#0F3B55; --teal-3:#134A68;
+  --gold:#C9A55A; --gold-2:#E3CB8B; --gold-3:#A88540;
+  --amber:#B9773A; --sand:#CDB99E; --sand-2:#E2D3BE;
+  --white:#FFFFFF;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost","Century Gothic","Segoe UI",system-ui,sans-serif;
+  --r:20px; --r-sm:12px;
+  --shadow:0 18px 50px -20px rgba(27,38,49,.28);
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.6;
+  color:var(--ink);background:var(--cream);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul{list-style:none}
+strong,b{font-weight:600}
+.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+@media (max-width:640px){.wrap{width:min(var(--max),100% - 40px)}}
+section{position:relative}
+.sec{padding:clamp(72px,9vw,120px) 0}
+
+/* ---------- typography ---------- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--amber);
+}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor;opacity:.7}
+.on-dark .eyebrow{color:var(--gold-2)}
+.on-sky .eyebrow{color:var(--ink-2)}
+h1,h2,h3{font-weight:300;letter-spacing:-.01em;line-height:1.12}
+h1 b,h2 b,h3 b{font-weight:600}
+h1{font-size:clamp(36px,5.6vw,64px);line-height:1.06;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4vw,46px);margin-top:14px}
+h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
+.lead{font-size:clamp(18px,1.45vw,21px);font-weight:300;color:var(--ink-2);line-height:1.6}
+.lead b{font-weight:500;color:var(--ink)}
+.serif{font-family:var(--serif)}
+.muted{color:var(--muted)}
+.small{font-size:15px}
+.sub{max-width:640px;margin-top:18px;color:var(--ink-2)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 28px;border-radius:999px;font-weight:500;font-size:16px;letter-spacing:.01em;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;
+  white-space:nowrap;
+}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--ink);color:var(--cream);box-shadow:0 12px 28px -12px rgba(27,38,49,.55)}
+.btn-primary:hover{background:#0f171f;transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:var(--teal);box-shadow:0 14px 32px -14px rgba(201,165,90,.7)}
+.btn-gold:hover{background:var(--gold-2);transform:translateY(-1px)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.7)}
+.on-dark .btn-ghost{border-color:rgba(255,255,255,.25);color:var(--cream);background:transparent}
+.on-dark .btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn .arr{width:18px;height:18px;flex:none}
+
+/* ---------- header ---------- */
+.hdr{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,243,236,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .2s;
+}
+.hdr.solid{border-bottom-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{font-family:var(--serif);font-size:26px;font-weight:500;letter-spacing:.02em;line-height:1;color:var(--ink);display:flex;align-items:baseline}
+.logo span{font-weight:400;font-style:italic;color:var(--amber);margin-left:1px}
+.nav{display:flex;gap:28px;font-size:15px;color:var(--ink-2)}
+.nav a{position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.nav a:hover::after{transform:scaleX(1)}
+.hdr .btn{padding:11px 20px;font-size:14px}
+@media (max-width:820px){.nav{display:none}}
+@media (max-width:420px){.hdr .btn{padding:10px 16px;font-size:13px}.logo{font-size:23px}}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(40px,6vw,88px) 0 clamp(56px,7vw,96px);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{margin-top:22px;max-width:14ch}
+.hero .lead{margin-top:24px;max-width:520px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px;align-items:center}
+.meta{margin-top:18px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+.meta b{font-weight:500;color:var(--ink-2)}
+.meta span+span::before{content:"·";color:var(--sand);margin-right:14px}
+.portrait{
+  position:relative;aspect-ratio:4/5;border-radius:26px;overflow:hidden;
+  background:var(--sand-2);box-shadow:var(--shadow);
+}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;transform:scale(1.02)}
+.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(20,28,36,.42))}
+.portrait .chip{
+  position:absolute;left:18px;right:18px;bottom:18px;z-index:2;
+  display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:14px;
+  background:rgba(247,243,236,.92);backdrop-filter:blur(8px);color:var(--ink);
+}
+.chip .dot{width:10px;height:10px;border-radius:50%;background:var(--gold);flex:none;box-shadow:0 0 0 4px rgba(201,165,90,.25)}
+.chip b{display:block;font-weight:500;font-size:15px;line-height:1.2}
+.chip span{font-size:13px;color:var(--muted)}
+.hero-frame{position:relative}
+.hero-frame::before{
+  content:"";position:absolute;inset:-14px -14px 22px 22px;border-radius:32px;
+  background:var(--sky);z-index:-1;
+}
+.constellation{position:absolute;right:-40px;top:-30px;width:min(52vw,560px);opacity:.75;pointer-events:none;z-index:-1}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .hero-frame{max-width:440px;margin-inline:auto;width:100%}
+  .hero h1{max-width:none}
+  .constellation{width:70vw;right:-20vw;top:-40px}
+}
+@media (max-width:480px){.hero-frame{max-width:none}.hero-frame::before{inset:-10px -10px 16px 16px}}
+@media (max-width:600px){.meta{flex-direction:column;gap:6px}.meta span+span::before{display:none}}
+
+/* ---------- questions / answer (blocks 2-4) ---------- */
+.ask{background:var(--sky);color:var(--ink)}
+.ask .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}
+.q{
+  display:flex;gap:16px;align-items:flex-start;padding:22px 24px;border-radius:var(--r);
+  background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);
+  font-size:clamp(18px,1.5vw,21px);font-weight:400;line-height:1.35;
+}
+.q .star{flex:none;width:22px;height:22px;margin-top:2px;color:var(--amber)}
+.answer{
+  margin-top:clamp(36px,5vw,56px);display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
+  max-width:860px;
+}
+.answer .bar{width:3px;background:var(--amber);border-radius:2px;align-self:stretch;margin-top:6px}
+.answer p{font-family:var(--serif);font-size:clamp(24px,2.7vw,34px);line-height:1.3;font-weight:500;color:var(--ink)}
+.answer p em{font-style:italic;color:var(--amber)}
+.answer .cta{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 22px}
+@media (max-width:720px){.ask .grid{grid-template-columns:1fr}}
+
+/* ---------- situations (block 5) ---------- */
+.sit .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:clamp(32px,4vw,48px)}
+.card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px 32px;
+  box-shadow:0 10px 30px -22px rgba(27,38,49,.35);
+  display:flex;flex-direction:column;gap:14px;
+}
+.card .num{font-family:var(--serif);font-size:54px;line-height:.9;font-weight:400;color:var(--amber);font-style:italic}
+.card h3{font-family:var(--serif);font-size:26px;font-weight:600;line-height:1.15;letter-spacing:0}
+.card p{color:var(--ink-2)}
+@media (max-width:860px){.sit .cards{grid-template-columns:1fr}}
+
+/* ---------- inside (block 6) ---------- */
+.inside{background:var(--teal);color:var(--cream);overflow:hidden}
+.inside::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(900px 600px at 85% 10%,rgba(19,74,104,.55),transparent 60%),
+    radial-gradient(700px 500px at 5% 95%,rgba(19,74,104,.45),transparent 60%);
+  pointer-events:none;
+}
+.inside .wrap{position:relative;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,88px);align-items:center}
+.inside h2{color:var(--white)}
+.inside .sub{color:rgba(247,243,236,.78)}
+.mock{position:relative;aspect-ratio:1/1.1;max-width:460px;margin-inline:auto;width:100%}
+.mock img{
+  position:absolute;border-radius:6px;box-shadow:0 30px 60px -20px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.06);
+  width:64%;height:auto;
+}
+.mock .p1{left:0;top:6%;transform:rotate(-5deg);z-index:2}
+.mock .p2{right:0;top:0;transform:rotate(5deg);z-index:1;opacity:.96}
+.mock .tag{
+  position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);z-index:3;white-space:nowrap;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2);
+  padding:10px 16px;border-radius:999px;background:rgba(11,45,66,.85);border:1px solid rgba(201,165,90,.35);backdrop-filter:blur(6px);
+}
+.dots{position:absolute;pointer-events:none;opacity:.9}
+.dots.a{left:-30px;top:-40px;width:260px}
+.dots.b{right:-20px;bottom:-60px;width:220px;transform:rotate(180deg)}
+.chapters{margin-top:34px;display:grid;gap:0}
+.ch{
+  display:grid;grid-template-columns:64px 1fr;gap:18px;padding:24px 0;border-top:1px solid rgba(255,255,255,.12);
+}
+.ch:last-of-type{border-bottom:1px solid rgba(255,255,255,.12)}
+.ch .num{font-family:var(--serif);font-size:40px;line-height:1;color:var(--gold);font-weight:400;font-style:italic;padding-top:2px}
+.ch h3{font-size:14px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--white);margin-bottom:10px}
+.ch li{position:relative;padding-left:18px;color:rgba(247,243,236,.85);font-weight:300;font-size:16.5px;line-height:1.5}
+.ch li::before{content:"";position:absolute;left:0;top:.75em;width:9px;height:1px;background:var(--gold)}
+.ch li+li{margin-top:5px}
+.bonus{
+  margin-top:22px;display:flex;gap:12px;align-items:center;padding:16px 20px;border-radius:14px;
+  background:rgba(201,165,90,.1);border:1px solid rgba(201,165,90,.35);
+  font-family:var(--serif);font-size:20px;font-style:italic;color:var(--gold-2);
+}
+.bonus .s{color:var(--gold);font-style:normal;font-family:var(--sans);font-size:18px}
+@media (max-width:900px){
+  .inside .wrap{grid-template-columns:1fr}
+  .mock{max-width:380px;aspect-ratio:1/1.05;margin-bottom:44px}
+}
+@media (max-width:480px){.ch{grid-template-columns:48px 1fr;gap:12px}.ch .num{font-size:34px}}
+
+/* ---------- doubts (block 7) ---------- */
+.doubt .list{margin-top:clamp(28px,4vw,44px);display:grid;gap:0;max-width:880px}
+.d{
+  display:grid;grid-template-columns:40px 1fr;gap:16px;padding:32px 0;border-top:1px solid var(--line);
+}
+.d:last-child{border-bottom:1px solid var(--line)}
+.d .s{color:var(--amber);font-size:22px;line-height:1;padding-top:6px}
+.d h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(23px,2.4vw,28px);line-height:1.25;letter-spacing:0}
+.d p{margin-top:12px;color:var(--ink-2);max-width:66ch}
+.d p b{font-weight:500;color:var(--ink)}
+
+/* ---------- price (block 8) ---------- */
+.price{background:var(--sky)}
+.price .wrap{display:grid;place-items:center}
+.pcard{
+  width:min(560px,100%);background:var(--teal);color:var(--cream);border-radius:28px;
+  padding:clamp(34px,5vw,52px) clamp(24px,4vw,48px);text-align:center;position:relative;overflow:hidden;
+  box-shadow:0 40px 80px -40px rgba(11,45,66,.7);
+}
+.pcard::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(500px 300px at 50% -10%,rgba(19,74,104,.8),transparent 70%);
+}
+.pcard>*{position:relative}
+.pcard .eyebrow{color:var(--gold-2);justify-content:center}
+.pcard .eyebrow::before{display:none}
+.was{margin-top:26px;font-size:20px;color:rgba(247,243,236,.55);text-decoration:line-through;text-decoration-color:rgba(226,203,139,.8);font-weight:300}
+.now{font-family:var(--serif);font-size:clamp(76px,10vw,104px);line-height:.9;font-weight:500;color:var(--white);letter-spacing:-.02em;margin-top:2px}
+.now small{font-family:var(--sans);font-size:22px;font-weight:300;color:var(--gold-2);margin-left:6px;letter-spacing:0}
+.pcard .note{margin-top:24px;font-size:17px;color:rgba(247,243,236,.85);font-weight:300;max-width:38ch;margin-inline:auto}
+.pcard .btn{margin-top:26px;width:100%;max-width:360px;padding:18px 28px;font-size:17px}
+.pcard ul{margin-top:26px;text-align:left;display:grid;gap:12px;max-width:420px;margin-inline:auto}
+.pcard li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.5;color:rgba(247,243,236,.85);font-weight:300}
+.pcard li .s{color:var(--gold);flex:none;padding-top:2px}
+.pcard .pay{margin-top:22px;font-size:13px;color:rgba(247,243,236,.5);letter-spacing:.04em}
+
+/* ---------- author ---------- */
+.author .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px);align-items:center}
+.aphoto{position:relative;aspect-ratio:4/5;border-radius:26px;overflow:hidden;background:var(--sand-2);box-shadow:var(--shadow)}
+.aphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.aframe{position:relative;max-width:420px}
+.aframe::before{content:"";position:absolute;inset:22px -14px -14px 22px;border-radius:32px;background:var(--cream-3);z-index:-1}
+.author .name{font-family:var(--serif);font-size:clamp(34px,4vw,48px);font-weight:500;line-height:1.05;margin-top:14px}
+.author .role{margin-top:10px;font-size:17px;color:var(--amber);font-weight:400}
+.author p.txt{margin-top:22px;color:var(--ink-2);max-width:60ch}
+.author p.txt+p.txt{margin-top:16px}
+.author p.txt b{font-weight:500;color:var(--ink)}
+.iglink{display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-weight:500;color:var(--ink);padding-bottom:3px;border-bottom:1px solid var(--line);transition:border-color .2s}
+.iglink:hover{border-color:var(--amber)}
+.iglink svg{width:20px;height:20px}
+@media (max-width:860px){.author .wrap{grid-template-columns:1fr}.aframe{margin-inline:auto;width:100%}}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--cream-2)}
+.faq .wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(28px,5vw,72px);align-items:start}
+.acc{border-top:1px solid var(--line)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:22px 0;font-size:clamp(18px,1.5vw,20px);font-weight:500;
+}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary .pl{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;position:relative;transition:transform .25s,background .2s}
+.acc summary .pl::before,.acc summary .pl::after{content:"";position:absolute;background:var(--ink);width:11px;height:1.5px}
+.acc summary .pl::after{transform:rotate(90deg)}
+.acc details[open] summary .pl{transform:rotate(45deg);background:var(--sky)}
+.acc .a{padding:0 0 24px;color:var(--ink-2);max-width:60ch;font-weight:300;font-size:17px}
+@media (max-width:860px){.faq .wrap{grid-template-columns:1fr;gap:24px}}
+
+/* ---------- final CTA ---------- */
+.final{background:var(--teal);color:var(--cream);text-align:center;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 50% 120%,rgba(19,74,104,.7),transparent 65%)}
+.final .wrap{position:relative;max-width:760px}
+.final h2{color:var(--white);font-family:var(--serif);font-weight:500;font-size:clamp(36px,5vw,58px);line-height:1.08}
+.final h2 em{font-style:italic;color:var(--gold-2)}
+.final p{margin-top:18px;color:rgba(247,243,236,.8);font-weight:300;font-size:18px}
+.final .cta-row{justify-content:center}
+.final .dots{left:50%;transform:translateX(-50%);top:-30px;width:300px;opacity:.6}
+
+/* ---------- footer ---------- */
+.ftr{padding:48px 0 40px;background:var(--cream)}
+.ftr .top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.ftr .legal{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px 40px;font-size:13.5px;color:var(--muted);line-height:1.6}
+.ftr .legal h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--ink-2);margin-bottom:6px}
+.ftr .ph{background:#FFF3CC;color:#7A5A00;padding:0 5px;border-radius:4px;font-weight:500}
+.ftr .copy{margin-top:26px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (max-width:720px){.ftr .legal{grid-template-columns:1fr}}
+
+/* ---------- modal (payment stub) ---------- */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:flex-end;justify-content:center;padding:0}
+.modal.open{display:flex}
+.modal .bg{position:absolute;inset:0;background:rgba(11,45,66,.55);backdrop-filter:blur(4px)}
+.modal .box{
+  position:relative;width:min(560px,100%);max-height:92vh;overflow:auto;background:var(--cream);
+  border-radius:26px 26px 0 0;padding:28px 24px 32px;box-shadow:0 -20px 60px rgba(0,0,0,.35);
+  animation:up .3s ease;
+}
+@keyframes up{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+@media (min-width:640px){.modal{align-items:center;padding:24px}.modal .box{border-radius:26px;padding:36px 36px 40px}}
+.modal .x{position:absolute;right:16px;top:16px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--cream-2);font-size:20px;line-height:1}
+.modal h3{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.1;padding-right:44px}
+.modal .hint{margin-top:8px;color:var(--muted);font-size:15px}
+.form{margin-top:22px;display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.f{display:grid;gap:6px}
+.f.full{grid-column:1/-1}
+.f label{font-size:13px;letter-spacing:.04em;color:var(--ink-2);font-weight:500}
+.f input{
+  font:inherit;font-size:16px;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:var(--white);color:var(--ink);outline:none;width:100%;
+  transition:border-color .2s,box-shadow .2s;
+}
+.f input:focus{border-color:var(--sky-3);box-shadow:0 0 0 4px rgba(175,198,221,.35)}
+.form .btn{grid-column:1/-1;margin-top:6px;padding:17px}
+.form .fine{grid-column:1/-1;font-size:12.5px;color:var(--muted);text-align:center;line-height:1.5}
+.done{display:none;text-align:center;padding:24px 0 8px}
+.done .s{font-size:44px;color:var(--gold-3)}
+.done h3{margin-top:10px}
+.done p{margin-top:10px;color:var(--ink-2)}
+.done .stub{margin-top:18px;display:inline-block;padding:10px 14px;border-radius:10px;background:#FFF3CC;color:#7A5A00;font-size:13px;font-weight:500}
+.modal.sent .form,.modal.sent .hint{display:none}
+.modal.sent .done{display:block}
+@media (max-width:480px){.form{grid-template-columns:1fr}}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.modal .box{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="ASTROшкола">ASTRO<span>школа</span></a>
+    <nav class="nav" aria-label="Навігація">
+      <a href="#inside">Що всередині</a>
+      <a href="#price">Вартість</a>
+      <a href="#author">Авторка</a>
+      <a href="#faq">Питання</a>
+    </nav>
+    <button class="btn btn-primary js-order">Отримати карту</button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== HERO (блок 1) ===== -->
+<section class="hero">
+  <svg class="constellation" viewBox="0 0 560 420" fill="none" aria-hidden="true">
+    <g stroke="#AFC6DD" stroke-width="1" opacity=".9">
+      <path d="M60 300 L140 230 L230 260 L300 170 L390 190 L470 110 L520 140"/>
+      <path d="M230 260 L250 360 L350 330"/>
+      <path d="M300 170 L280 80 L360 40"/>
+    </g>
+    <g fill="#AFC6DD">
+      <circle cx="60" cy="300" r="4"/><circle cx="140" cy="230" r="3"/><circle cx="230" cy="260" r="5"/>
+      <circle cx="300" cy="170" r="3.5"/><circle cx="390" cy="190" r="3"/><circle cx="470" cy="110" r="4.5"/>
+      <circle cx="520" cy="140" r="2.5"/><circle cx="250" cy="360" r="3"/><circle cx="350" cy="330" r="4"/>
+      <circle cx="280" cy="80" r="3"/><circle cx="360" cy="40" r="4"/>
+    </g>
+    <g fill="#C9A55A" opacity=".8">
+      <circle cx="120" cy="120" r="2"/><circle cx="430" cy="300" r="2.5"/><circle cx="500" cy="230" r="1.5"/><circle cx="180" cy="380" r="1.8"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv">Персональна натальна карта дитини · PDF</span>
+      <h1 class="rv d1"><b>Найбільша помилка батьків</b> 1&nbsp;вересня — вважати, що всі діти вчаться однаково.</h1>
+      <p class="lead rv d2">У вашої дитини вже є її вроджена інструкція: <b>сила, здібності та потенціал.</b> Просто ви ще її не читали.</p>
+      <div class="cta-row rv d3">
+        <button class="btn btn-primary js-order">Отримати карту дитини
+          <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <a class="btn btn-ghost" href="#inside">Що всередині</a>
+      </div>
+      <div class="meta rv d3">
+        <span>PDF <b>до 20 сторінок</b></span>
+        <span>індивідуальний розрахунок</span>
+        <span>на пошту <b>протягом 24 годин</b> після оплати</span>
+      </div>
+    </div>
+    <div class="hero-frame rv d2">
+      <div class="portrait">
+        <img src="{{IMG_AUTHOR}}" alt="Галина Журавель — психологиня, дитячий астролог" width="1000" height="1250" fetchpriority="high">
+        <div class="chip"><span class="dot"></span><div><b>Галина Журавель</b><span>психологиня · дитячий астролог</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ПИТАННЯ + ВІДПОВІДЬ (блоки 2–4) ===== -->
+<section class="sec ask on-sky">
+  <div class="wrap">
+    <span class="eyebrow rv">Перед новим навчальним роком</span>
+    <h2 class="rv d1"><b>Питання,</b> з якими приходять батьки</h2>
+    <div class="grid">
+      <div class="q rv"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як увійти в новий навчальний рік без помилок?</div>
+      <div class="q rv d1"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Чому третій гурток теж не той?</div>
+      <div class="q rv d2"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як не перевантажити дитину?</div>
+      <div class="q rv d3"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Що необхідно її емоційній природі?</div>
+    </div>
+    <div class="answer rv">
+      <div class="bar"></div>
+      <div>
+        <p>Натальна карта вашої дитини вже містить відповідь на те, як їй вчитися, з ким дружити і які здібності розвивати. Залишилось тільки її прочитати — <em>і я зробила це за вас!</em></p>
+        <div class="cta">
+          <button class="btn btn-primary js-order">Отримати карту дитини</button>
+          <span class="small muted">PDF до 20 сторінок · готовий протягом 24 годин після оплати</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ТРИ СИТУАЦІЇ (блок 5) ===== -->
+<section class="sec sit">
+  <div class="wrap">
+    <span class="eyebrow rv">Впізнаєте себе?</span>
+    <h2 class="rv d1"><b>Три ситуації,</b> які повторюються з&nbsp;року в&nbsp;рік</h2>
+    <div class="cards">
+      <article class="card rv">
+        <div class="num">01</div>
+        <h3>Гурток за гуртком, а іскри немає</h3>
+        <p>За рік — три різні секції. Щоразу «нецікаво», «не хочу», сльози перед заняттям. Проблема не в гуртках. Проблема в тому, що ви обираєте навмання.</p>
+      </article>
+      <article class="card rv d1">
+        <div class="num">02</div>
+        <h3>Конфлікти, яких ви не розумієте</h3>
+        <p>Вчителька скаржиться, однокласники дратують — а вдома зовсім інша дитина. Ви губитеся: це вік, характер чи щось глибше?</p>
+      </article>
+      <article class="card rv d2">
+        <div class="num">03</div>
+        <h3>Страх проґавити момент</h3>
+        <p>Десь усередині є відчуття, що у дитини є талант, якого ви поки не бачите.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЩО ВСЕРЕДИНІ (блок 6) ===== -->
+<section class="sec inside on-dark" id="inside">
+  <svg class="dots a" viewBox="0 0 260 300" fill="#C9A55A" aria-hidden="true">
+    <circle cx="130" cy="20" r="14" opacity=".9"/><circle cx="160" cy="70" r="7"/><circle cx="120" cy="120" r="22" opacity=".85"/>
+    <circle cx="95" cy="190" r="10"/><circle cx="140" cy="230" r="15" opacity=".8"/><circle cx="110" cy="280" r="6"/>
+    <g opacity=".6"><circle cx="60" cy="40" r="1.5"/><circle cx="200" cy="30" r="1.2"/><circle cx="210" cy="140" r="1.6"/><circle cx="40" cy="120" r="1.2"/><circle cx="70" cy="240" r="1.4"/><circle cx="190" cy="210" r="1.3"/><circle cx="30" cy="200" r="1"/><circle cx="230" cy="90" r="1"/><circle cx="170" cy="170" r="1.2"/><circle cx="90" cy="80" r="1"/></g>
+  </svg>
+  <div class="wrap">
+    <div class="mock rv">
+      <img class="p2" src="{{IMG_TOC}}" alt="Зміст карти: три розділи та бонус" width="700" height="989" loading="lazy">
+      <img class="p1" src="{{IMG_COVER}}" alt="Обкладинка: ASTROшкола — навчальний потенціал дитини" width="700" height="989" loading="lazy">
+      <span class="tag">Перші сторінки карти</span>
+    </div>
+    <div>
+      <span class="eyebrow rv">Що всередині</span>
+      <h2 class="rv d1"><b>Три розділи,</b> які розкривають дитину повністю</h2>
+      <p class="sub rv d2">Карта будує цілісну картину — від того, як дитина проявляється в житті, до того, що на неї впливає у стосунках із вами. Плюс бонусний розділ наприкінці. Без езотеричних термінів — мовою, зрозумілою без підготовки.</p>
+      <div class="chapters">
+        <div class="ch rv">
+          <div class="num">01</div>
+          <div>
+            <h3>Особистість</h3>
+            <ul>
+              <li>Домінуючий спосіб прояву в житті</li>
+              <li>Тип характеру: екстраверт чи інтроверт</li>
+              <li>Тип особистості щодо прийняття рішень</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ch rv">
+          <div class="num">02</div>
+          <div>
+            <h3>Навчальний потенціал дитини</h3>
+            <ul>
+              <li>Як розкрити навчальний потенціал дитини</li>
+              <li>Тип ментальної активності</li>
+              <li>Тип мислення</li>
+              <li>Особливості навчання</li>
+              <li>Особливості мови дитини</li>
+              <li>Особливості пам'яті</li>
+              <li>Здібності до іноземних мов</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ch rv">
+          <div class="num">03</div>
+          <div>
+            <h3>Внутрішній стан</h3>
+            <ul>
+              <li>Емоційна природа дитини</li>
+              <li>Що мотивує дитину</li>
+              <li>Образ мами</li>
+              <li>Яку сферу зачепить підлітковий вік</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bonus rv"><span class="s">✦</span> + бонус від мене, який чекає на вас наприкінці карти</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЧЕСНО ПРО СУМНІВИ (блок 7) ===== -->
+<section class="sec doubt">
+  <div class="wrap">
+    <span class="eyebrow rv">Чесно про сумніви</span>
+    <h2 class="rv d1">Про що ви, <b>ймовірно,</b> зараз думаєте</h2>
+    <div class="list">
+      <div class="d rv">
+        <div class="s">✦</div>
+        <div>
+          <h3>«Це ж просто гороскоп, я в таке не вірю»</h3>
+          <p>Це не про передбачення майбутнього. Натальна карта тут — це інструмент психологічного спостереження: мова, яка описує тип сприйняття дитини, темп навчання, спосіб будувати стосунки. Астрологія в цьому продукті — <b>метод структурування, а не містика.</b></p>
+        </div>
+      </div>
+      <div class="d rv">
+        <div class="s">✦</div>
+        <div>
+          <h3>«А раптом це буде занадто загально, як тести в інтернеті»</h3>
+          <p>Кожна карта рахується індивідуально за датою, часом і місцем народження вашої дитини. Я особисто переглядаю й формулюю кожен розділ — це не автоматично згенерований текст за шаблоном на всіх дітей одного знаку. <b>Тому що жоден ШІ не зробить це індивідуально!</b></p>
+        </div>
+      </div>
+      <div class="d rv">
+        <div class="s">✦</div>
+        <div>
+          <h3>«790 грн за PDF — це дорого»</h3>
+          <p>Порівняйте з вартістю одного гуртка, який виявиться «не тим» — це одне заняття оплати секції, яку дитина покине через два тижні. <b>Карта заощаджує саме ці спроби навмання, а не додає ще одну.</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ВАРТІСТЬ (блок 8) ===== -->
+<section class="sec price" id="price">
+  <div class="wrap">
+    <div class="pcard rv">
+      <span class="eyebrow">Карта дитини · PDF</span>
+      <div class="was">1300 грн</div>
+      <div class="now">790<small>грн</small></div>
+      <p class="note">Менше, ніж один комплект зошитів, а працює кілька навчальних років.</p>
+      <button class="btn btn-gold js-order">Отримати свою карту зараз</button>
+      <ul>
+        <li><span class="s">✦</span>PDF до 20 сторінок, готовий до друку або читання з телефону.</li>
+        <li><span class="s">✦</span>Індивідуальний розрахунок за датою, часом та місцем народження вашої дитини.</li>
+        <li><span class="s">✦</span>Надсилається на пошту протягом 24 годин після оплати.</li>
+      </ul>
+      <div class="pay">Оплата карткою онлайн</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== АВТОРКА ===== -->
+<section class="sec author" id="author">
+  <div class="wrap">
+    <div class="aframe rv">
+      <div class="aphoto"><img src="{{IMG_AUTHOR}}" alt="Галина Журавель" width="1000" height="1250" loading="lazy"></div>
+    </div>
+    <div>
+      <span class="eyebrow rv">Автор карти</span>
+      <div class="name rv d1">Галина Журавель</div>
+      <div class="role rv d1">Психологиня, астролог, авторка персональних астрологічних книг</div>
+      <p class="txt rv d2">Поєдную академічну психологію з мовою астрології, щоб дати батькам не передбачення, а <b>практичний інструмент розуміння дитини.</b> Працюю з дитячими натальними картами й сімейною динамікою в межах підходу свідомого батьківства — без драматизації та страшилок.</p>
+      <p class="txt rv d2"><b>Кожну карту читаю особисто!</b> Це та сама увага до деталей, яку я вкладаю у власну книгу й консультації.</p>
+      <a class="iglink rv d3" href="https://www.instagram.com/psy.astro_zhuravel" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg>
+        @psy.astro_zhuravel
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ПИТАННЯ ===== -->
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv">Питання</span>
+      <h2 class="rv d1">Перш ніж <b>купити</b></h2>
+      <p class="sub rv d2 small">Не знайшли відповіді? Напишіть у&nbsp;<a class="iglink" style="margin:0" href="https://www.instagram.com/psy.astro_zhuravel" target="_blank" rel="noopener">direct Instagram</a>.</p>
+    </div>
+    <div class="acc rv">
+      <details>
+        <summary>Для якого віку підходить карта?<span class="pl"></span></summary>
+        <div class="a">Від 5 до 16 років. Формулювання й розділи адаптуються під вік дитини, вказаний при замовленні.</div>
+      </details>
+      <details>
+        <summary>Скільки чекати після оплати?<span class="pl"></span></summary>
+        <div class="a">PDF надсилається на вказану пошту протягом 24 годин.</div>
+      </details>
+      <details>
+        <summary>У мене двоє чи троє дітей, що робити?<span class="pl"></span></summary>
+        <div class="a">Оформіть окреме замовлення на кожну дитину.</div>
+      </details>
+      <details>
+        <summary>Це замінює консультацію з астрологом наживо?<span class="pl"></span></summary>
+        <div class="a">Це компактний перший крок і самостійний продукт. Якщо після прочитання захочеться поглибитись, то є повна консультація із живим розбором.</div>
+      </details>
+      <details>
+        <summary>Які дані потрібні для консультації?<span class="pl"></span></summary>
+        <div class="a">Обов'язково: точний час, дата і місце народження!</div>
+      </details>
+      <details>
+        <summary>Якою мовою написана карта?<span class="pl"></span></summary>
+        <div class="a">Лише нашою прекрасною, солов'їною українською мовою.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ФІНАЛЬНИЙ CTA ===== -->
+<section class="sec final on-dark">
+  <svg class="dots" viewBox="0 0 300 120" fill="#C9A55A" aria-hidden="true">
+    <circle cx="150" cy="30" r="10"/><circle cx="110" cy="70" r="5"/><circle cx="200" cy="80" r="7"/><circle cx="60" cy="40" r="3"/><circle cx="250" cy="40" r="3.5"/>
+    <g opacity=".6"><circle cx="30" cy="90" r="1.3"/><circle cx="90" cy="20" r="1"/><circle cx="230" cy="100" r="1.2"/><circle cx="280" cy="80" r="1"/><circle cx="170" cy="105" r="1.1"/></g>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow rv">Час читати</span>
+    <h2 class="rv d1">У вашої дитини вже є <em>вроджена інструкція.</em></h2>
+    <p class="rv d2">Прочитайте її до того, як обиратимете гурток, репетитора чи школу навмання.</p>
+    <div class="cta-row rv d3">
+      <button class="btn btn-gold js-order">Отримати карту дитини — 790 грн</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="#top">ASTRO<span>школа</span></a>
+      <a class="iglink" style="margin:0" href="https://www.instagram.com/psy.astro_zhuravel" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg>
+        @psy.astro_zhuravel
+      </a>
+    </div>
+    <!-- Публічна інформація: обов'язково для модерації платіжної системи. Дані заповнити реальними. -->
+    <div class="legal">
+      <div>
+        <h4>Продавець</h4>
+        <span class="ph">[ФОП Прізвище Ім'я По батькові]</span><br>
+        РНОКПП: <span class="ph">[0000000000]</span><br>
+        <span class="ph">[адреса]</span> · <span class="ph">[телефон]</span> · <span class="ph">[email]</span>
+      </div>
+      <div>
+        <h4>Послуга та умови</h4>
+        Персональна астрологічна карта дитини у форматі PDF (до 20 сторінок). Надсилається на email, вказаний при замовленні, протягом 24 годин після оплати. Оплата карткою Visa/Mastercard. Повернення коштів: <span class="ph">[умови повернення]</span>.
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 ASTROшкола · Галина Журавель</span>
+      <span>Дитяча натальна астрологія · свідоме батьківство</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MODAL: замовлення (заглушка оплати) ===== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+  <div class="bg js-close"></div>
+  <div class="box">
+    <button class="x js-close" aria-label="Закрити">×</button>
+    <h3 id="mtitle">Замовити карту дитини</h3>
+    <p class="hint">Дані для розрахунку. Після оплати PDF прийде на вашу пошту протягом 24 годин.</p>
+    <form class="form" id="orderForm" novalidate>
+      <div class="f"><label for="pname">Ваше ім'я</label><input id="pname" name="parent" type="text" autocomplete="name" required></div>
+      <div class="f"><label for="pmail">Email для отримання PDF</label><input id="pmail" name="email" type="email" autocomplete="email" required></div>
+      <div class="f full"><label for="cname">Ім'я дитини</label><input id="cname" name="child" type="text" required></div>
+      <div class="f"><label for="cdate">Дата народження</label><input id="cdate" name="date" type="date" required></div>
+      <div class="f"><label for="ctime">Точний час народження</label><input id="ctime" name="time" type="time" required></div>
+      <div class="f full"><label for="cplace">Місце народження (місто, країна)</label><input id="cplace" name="place" type="text" required></div>
+      <button class="btn btn-gold" type="submit">Перейти до оплати — 790 грн</button>
+      <div class="fine">Натискаючи кнопку, ви погоджуєтесь з умовами надання послуги.</div>
+    </form>
+    <div class="done">
+      <div class="s">✦</div>
+      <h3>Дякуємо!</h3>
+      <p>Тут буде перехід на сторінку оплати. Після оплати карта прийде на вашу пошту протягом 24 годин.</p>
+      <div class="stub">Заглушка · оплату буде підключено</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // ---- Оплата: заглушка. Коли буде платіжна система — вставити URL сюди і розкоментувати редірект у submit.
+  var PAYMENT_URL = "";
+
+  var hdr=document.getElementById('hdr');
+  var onScroll=function(){hdr.classList.toggle('solid',window.scrollY>8)};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  // reveal on scroll
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+
+  // modal
+  var modal=document.getElementById('modal'),form=document.getElementById('orderForm'),lastFocus=null;
+  function open(){lastFocus=document.activeElement;modal.classList.add('open');document.body.style.overflow='hidden';setTimeout(function(){var f=modal.querySelector('input');f&&f.focus()},50)}
+  function close(){modal.classList.remove('open');document.body.style.overflow='';lastFocus&&lastFocus.focus&&lastFocus.focus()}
+  [].forEach.call(document.querySelectorAll('.js-order'),function(b){b.addEventListener('click',open)});
+  [].forEach.call(document.querySelectorAll('.js-close'),function(b){b.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))close()});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return}
+    // TODO: відправити дані форми (email / Telegram / Google Sheets) перед переходом на оплату
+    if(PAYMENT_URL){window.location.href=PAYMENT_URL;return}
+    modal.classList.add('sent');
+  });
+})();
+</script>
+</body>
+</html>
