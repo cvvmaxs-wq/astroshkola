@@ -23,7 +23,7 @@ def jpg_b64(path, width, quality=82, crop=None):
     return "data:image/jpeg;base64," + base64.b64encode(data).decode()
 
 html = open(SRC + r"\template.html", encoding="utf-8").read()
-html = html.replace("{{IMG_AUTHOR}}", jpg_b64(r"C:\Users\Mello\Downloads\Telegram Desktop\IMG_7947.jpg", 1000, 80, crop=(4, 5)))
+# фото авторки прибрано з сайту 15.09 (правка Галини); IMG_7947.jpg лишається в Telegram Desktop на випадок повернення
 html = html.replace("{{IMG_COVER}}",  jpg_b64(SRC + r"\pdf_p1.jpg", 700, 82))
 html = html.replace("{{IMG_TOC}}",    jpg_b64(SRC + r"\pdf_p3.jpg", 700, 80))
 assert "{{" not in html, "unreplaced placeholder"

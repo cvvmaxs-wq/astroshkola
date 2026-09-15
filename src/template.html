@@ -233,11 +233,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 .pcard .pay{margin-top:22px;font-size:13px;color:rgba(247,243,236,.5);letter-spacing:.04em}
 
 /* ---------- author ---------- */
-.author .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px);align-items:center}
-.aphoto{position:relative;aspect-ratio:4/5;border-radius:26px;overflow:hidden;background:var(--sand-2);box-shadow:var(--shadow)}
-.aphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
-.aframe{position:relative;max-width:420px}
-.aframe::before{content:"";position:absolute;inset:22px -14px -14px 22px;border-radius:32px;background:var(--cream-3);z-index:-1}
+.author-text{max-width:760px}
 .author .name{font-family:var(--serif);font-size:clamp(34px,4vw,48px);font-weight:500;line-height:1.05;margin-top:14px}
 .author .role{margin-top:10px;font-size:17px;color:var(--amber);font-weight:400}
 .author p.txt{margin-top:22px;color:var(--ink-2);max-width:60ch}
@@ -249,7 +245,6 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 .author .iglink{margin-top:30px;font-size:19px;padding:14px 24px;border:1.5px solid var(--ink);border-radius:999px;transition:background .2s,color .2s}
 .author .iglink svg{width:24px;height:24px}
 .author .iglink:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
-@media (max-width:860px){.author .wrap{grid-template-columns:1fr}.aframe{margin-inline:auto;width:100%}}
 
 /* ---------- FAQ ---------- */
 .faq{background:var(--cream-2)}
@@ -544,10 +539,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 <!-- ===== АВТОРКА ===== -->
 <section class="sec author" id="author">
   <div class="wrap">
-    <div class="aframe rv">
-      <div class="aphoto"><img src="{{IMG_AUTHOR}}" alt="Галина Журавель" width="1000" height="1250" loading="lazy"></div>
-    </div>
-    <div>
+    <div class="author-text">
       <span class="eyebrow rv">Автор карти</span>
       <div class="name rv d1">Галина Журавель</div>
       <div class="role rv d1">Психологиня, астролог, авторка персональних астрологічних книг</div>
