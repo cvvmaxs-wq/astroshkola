@@ -11,7 +11,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230B2D42'/%3E%3Ccircle cx='32' cy='32' r='11' fill='%23C9A55A'/%3E%3Ccircle cx='47' cy='19' r='3' fill='%23C9A55A'/%3E%3Ccircle cx='18' cy='44' r='2' fill='%23C9A55A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --cream:#F7F3EC; --cream-2:#EFE8DD; --cream-3:#E6DCCB;
@@ -110,6 +110,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 .lead-hl::before{content:"";width:3px;background:var(--amber);border-radius:2px;margin-top:6px}
 .lead-hl p{font-family:var(--serif);font-size:clamp(25px,2.9vw,36px);line-height:1.28;font-weight:500;color:var(--ink)}
 .lead-hl em{font-style:italic;color:var(--amber)}
+.lead-hl strong{font-weight:700;color:#0B0F14}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px;align-items:center}
 .constellation{position:absolute;right:-40px;top:-30px;width:min(52vw,560px);opacity:.75;pointer-events:none;z-index:-1}
 @media (max-width:900px){
@@ -120,14 +121,21 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 
 /* ---------- questions / answer (blocks 2-4) ---------- */
 .ask{background:var(--sky);color:var(--ink)}
-.qlist{margin-top:30px;max-width:760px;border-top:1px solid rgba(27,38,49,.14)}
+.ask-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,5vw,72px);align-items:start}
+.ask-media{position:sticky;top:96px;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--sky-2);box-shadow:var(--shadow)}
+.ask-media img{width:100%;height:100%;object-fit:cover}
+.qlist{margin-top:26px;display:grid;gap:4px}
 .qlist li{
-  display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid rgba(27,38,49,.14);
-  font-size:clamp(19px,1.7vw,23px);font-weight:400;line-height:1.35;
+  display:flex;gap:12px;align-items:flex-start;padding:6px 0;
+  font-size:clamp(17px,1.3vw,19px);font-weight:400;line-height:1.4;
 }
-.qlist .star{flex:none;width:22px;height:22px;margin-top:4px;color:var(--amber)}
+.qlist .star{flex:none;width:15px;height:15px;margin-top:6px;color:var(--amber)}
+@media (max-width:900px){
+  .ask-grid{grid-template-columns:1fr;gap:32px}
+  .ask-media{position:static;aspect-ratio:4/3;border-radius:20px}
+}
 .answer{
-  margin-top:clamp(36px,5vw,56px);display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
+  margin-top:clamp(32px,4vw,44px);display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
   max-width:860px;
 }
 .answer .bar{width:3px;background:var(--amber);border-radius:2px;align-self:stretch;margin-top:6px}
@@ -233,7 +241,11 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 .pcard .pay{margin-top:22px;font-size:13px;color:rgba(247,243,236,.5);letter-spacing:.04em}
 
 /* ---------- author ---------- */
-.author-text{max-width:760px}
+.author .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px);align-items:center}
+.aphoto{position:relative;aspect-ratio:4/5;border-radius:26px;overflow:hidden;background:var(--sand-2);box-shadow:var(--shadow)}
+.aphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.aframe{position:relative;max-width:420px}
+.aframe::before{content:"";position:absolute;inset:22px -14px -14px 22px;border-radius:32px;background:var(--cream-3);z-index:-1}
 .author .name{font-family:var(--serif);font-size:clamp(34px,4vw,48px);font-weight:500;line-height:1.05;margin-top:14px}
 .author .role{margin-top:10px;font-size:17px;color:var(--amber);font-weight:400}
 .author p.txt{margin-top:22px;color:var(--ink-2);max-width:60ch}
@@ -245,6 +257,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 .author .iglink{margin-top:30px;font-size:19px;padding:14px 24px;border:1.5px solid var(--ink);border-radius:999px;transition:background .2s,color .2s}
 .author .iglink svg{width:24px;height:24px}
 .author .iglink:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+@media (max-width:860px){.author .wrap{grid-template-columns:1fr}.aframe{margin-inline:auto;width:100%}}
 
 /* ---------- FAQ ---------- */
 .faq{background:var(--cream-2)}
@@ -364,7 +377,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
       <span class="eyebrow rv">Персональна натальна карта дитини</span>
       <h1 class="rv d1"><b>Найбільша помилка батьків</b> — вважати, що всі діти вчаться однаково.</h1>
       <div class="lead-hl rv d2">
-        <p>У вашої дитини вже є її вроджена інструкція: <em>сила, здібності та потенціал.</em> Просто ви ще її не читали.</p>
+        <p>У вашої дитини вже є її вроджена інструкція: <em>сила, здібності та потенціал.</em> <strong>Консультація АстроШкола: навчальний потенціал дитини створена для розуміння та допомоги дитині у навчальному році!</strong></p>
       </div>
       <div class="cta-row rv d3">
         <button class="btn btn-primary js-order">Отримати карту дитини
@@ -377,14 +390,30 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 
 <!-- ===== ПИТАННЯ + ВІДПОВІДЬ (блоки 2–4) ===== -->
 <section class="sec ask on-sky">
-  <div class="wrap">
+  <div class="wrap ask-grid">
+    <div class="ask-media rv">
+      <img src="{{IMG_ASK}}" alt="Натальна карта дитини" width="1100" height="1100" loading="lazy">
+    </div>
+    <div class="ask-body">
     <span class="eyebrow rv">Перед новим навчальним роком</span>
     <h2 class="rv d1"><b>Питання,</b> з якими приходять батьки</h2>
-    <ul class="qlist">
-      <li class="rv"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як увійти в новий навчальний рік без помилок?</li>
-      <li class="rv d1"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Чому третій гурток теж не той?</li>
-      <li class="rv d2"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як не перевантажити дитину?</li>
-      <li class="rv d3"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Що необхідно її емоційній природі?</li>
+    <ul class="qlist rv">
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як увійти в новий навчальний рік без помилок?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Чому третій гурток теж не той?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як не перевантажити дитину?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Що необхідно її емоційній природі?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як моїй дитині легше вчитися, який підхід підходить саме їй?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Це лінь чи їй справді важко дається матеріал?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Що спрацює як мотивація — заохочення чи дисципліна?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як розвинути пам'ять і увагу?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Скільки гуртків — це норма, а скільки вже перевантаження?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Спорт чи творчість, що ближче дитині за природою?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Чи є здібності до мов і чи варто починати другу мову?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Чому мова «не йде», хоча вчитель хороший?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як зрозуміти, що вона відчуває насправді, а не просто «все нормально»?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Що мотивує саме мою дитину: похвала, результат, суперництво?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Чого чекати від дитини в перехідному віці, яка сфера зміниться першою?</li>
+      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як зберегти контакт із дитиною в цей період?</li>
     </ul>
     <div class="answer rv">
       <div class="bar"></div>
@@ -394,6 +423,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
           <button class="btn btn-primary js-order">Отримати карту дитини</button>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -539,6 +569,9 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 <!-- ===== АВТОРКА ===== -->
 <section class="sec author" id="author">
   <div class="wrap">
+    <div class="aframe rv">
+      <div class="aphoto"><img src="{{IMG_AUTHOR}}" alt="Галина Журавель" width="1000" height="1250" loading="lazy"></div>
+    </div>
     <div class="author-text">
       <span class="eyebrow rv">Автор карти</span>
       <div class="name rv d1">Галина Журавель</div>
