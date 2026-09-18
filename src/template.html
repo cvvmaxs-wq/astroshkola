@@ -313,6 +313,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 .f{display:grid;gap:6px}
 .f.full{grid-column:1/-1}
 .f label{font-size:13px;letter-spacing:.04em;color:var(--ink-2);font-weight:500}
+.f input::placeholder{color:#A6AEB6}
 .f input{
   font:inherit;font-size:16px;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:var(--white);color:var(--ink);outline:none;width:100%;
   transition:border-color .2s,box-shadow .2s;
@@ -681,6 +682,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
     <form class="form" id="orderForm" novalidate>
       <div class="f"><label for="pname">Ваше ім'я</label><input id="pname" name="parent" type="text" autocomplete="name" required></div>
       <div class="f"><label for="pmail">Email для отримання PDF</label><input id="pmail" name="email" type="email" autocomplete="email" required></div>
+      <div class="f full"><label for="ptg">Нік у Telegram для зв'язку</label><input id="ptg" name="telegram" type="text" placeholder="@nickname" autocomplete="off"></div>
       <div class="f full"><label for="cname">Ім'я дитини</label><input id="cname" name="child" type="text" required></div>
       <div class="f"><label for="cdate">Дата народження</label><input id="cdate" name="date" type="date" required></div>
       <div class="f"><label for="ctime">Точний час народження</label><input id="ctime" name="time" type="time" required></div>
