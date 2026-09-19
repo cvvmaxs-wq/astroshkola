@@ -92,15 +92,15 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 }
 .hdr.solid{border-bottom-color:var(--line)}
 .hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
-.logo{font-family:var(--serif);font-size:26px;font-weight:500;letter-spacing:.02em;line-height:1;color:var(--ink);display:flex;align-items:baseline}
-.logo span{font-weight:400;font-style:italic;color:var(--amber);margin-left:1px}
+.logo{font-family:var(--serif);font-size:23px;font-weight:500;letter-spacing:.02em;line-height:1.05;color:var(--ink);display:flex;flex-direction:column;white-space:nowrap}
+.logo small{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--amber);margin-bottom:3px}
 .nav{display:flex;gap:28px;font-size:15px;color:var(--ink-2)}
 .nav a{position:relative;padding:6px 0}
 .nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .2s}
 .nav a:hover::after{transform:scaleX(1)}
 .hdr .btn{padding:11px 20px;font-size:14px}
 @media (max-width:820px){.nav{display:none}}
-@media (max-width:420px){.hdr .btn{padding:10px 16px;font-size:13px}.logo{font-size:23px}}
+@media (max-width:420px){.hdr .btn{padding:10px 16px;font-size:13px}.logo{font-size:20px}}
 
 /* ---------- hero ---------- */
 .hero{padding:clamp(40px,6vw,88px) 0 clamp(56px,7vw,96px);overflow:hidden}
@@ -342,7 +342,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 <!-- ===== HEADER ===== -->
 <header class="hdr" id="hdr">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="ASTROшкола">ASTRO<span>школа</span></a>
+    <a class="logo" href="#top" aria-label="Astrolog Halyna Zhuravel"><small>Astrolog</small>Halyna Zhuravel</a>
     <nav class="nav" aria-label="Навігація">
       <a href="#inside">Що всередині</a>
       <a href="#price">Вартість</a>
@@ -378,7 +378,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
       <span class="eyebrow rv">Персональна натальна карта дитини</span>
       <h1 class="rv d1"><b>Найбільша помилка батьків</b> — вважати, що всі діти вчаться однаково.</h1>
       <div class="lead-hl rv d2">
-        <p>У вашої дитини вже є її вроджена інструкція: <em>сила, здібності та потенціал.</em> <strong>Консультація АстроШкола: навчальний потенціал дитини створена для розуміння та допомоги дитині у навчальному році!</strong></p>
+        <p>У вашої дитини вже є її вроджена інструкція: <em>сила, здібності та потенціал.</em> <strong>Консультація АстроШкола: НАВЧАЛЬНИЙ ПОТЕНЦІАЛ ДИТИНИ створена для розуміння та допомоги дитині у навчальному році!</strong></p>
       </div>
       <div class="cta-row rv d3">
         <button class="btn btn-primary js-order">Отримати карту дитини
@@ -401,17 +401,11 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
     <ul class="qlist rv">
       <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як увійти в новий навчальний рік без помилок?</li>
       <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Чому третій гурток теж не той?</li>
-      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як не перевантажити дитину?</li>
       <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Що необхідно її емоційній природі?</li>
       <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як моїй дитині легше вчитися, який підхід підходить саме їй?</li>
-      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Це лінь чи їй справді важко дається матеріал?</li>
       <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Що спрацює як мотивація — заохочення чи дисципліна?</li>
       <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як розвинути пам'ять і увагу?</li>
-      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Скільки гуртків — це норма, а скільки вже перевантаження?</li>
-      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Спорт чи творчість, що ближче дитині за природою?</li>
       <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Чи є здібності до мов і чи варто починати другу мову?</li>
-      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Чому мова «не йде», хоча вчитель хороший?</li>
-      <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як зрозуміти, що вона відчуває насправді, а не просто «все нормально»?</li>
       <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Що мотивує саме мою дитину: похвала, результат, суперництво?</li>
       <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Чого чекати від дитини в перехідному віці, яка сфера зміниться першою?</li>
       <li><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.7 7.5 8 10-5.3 2.5-7.4 5.4-8 10-.6-4.6-2.7-7.5-8-10 5.3-2.5 7.4-5.4 8-10z"/></svg>Як зберегти контакт із дитиною в цей період?</li>
@@ -429,27 +423,22 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
   </div>
 </section>
 
-<!-- ===== ТРИ СИТУАЦІЇ (блок 5) ===== -->
-<section class="sec sit">
+<!-- ===== АВТОРКА ===== -->
+<section class="sec author" id="author">
   <div class="wrap">
-    <span class="eyebrow rv">Впізнаєте себе?</span>
-    <h2 class="rv d1"><b>Три ситуації,</b> які повторюються з&nbsp;року в&nbsp;рік</h2>
-    <div class="cards">
-      <article class="card rv">
-        <div class="num">01</div>
-        <h3>Гурток за гуртком, а іскри немає</h3>
-        <p>За рік три різні секції. Щоразу «нецікаво», «не хочу», сльози перед заняттям. Проблема не в гуртках, а в тому, що ви обираєте навмання.</p>
-      </article>
-      <article class="card rv d1">
-        <div class="num">02</div>
-        <h3>Конфлікти, яких ви не розумієте</h3>
-        <p>Вчителька скаржиться, однокласники дратують, а вдома зовсім інша дитина. Ви губитеся: це вік, характер чи щось глибше?</p>
-      </article>
-      <article class="card rv d2">
-        <div class="num">03</div>
-        <h3>Страх проґавити момент</h3>
-        <p>Десь усередині є відчуття, що у дитини є талант, якого ви поки не бачите.</p>
-      </article>
+    <div class="aframe rv">
+      <div class="aphoto"><img src="{{IMG_AUTHOR}}" alt="Галина Журавель" width="1000" height="1250" loading="lazy"></div>
+    </div>
+    <div class="author-text">
+      <span class="eyebrow rv">Автор карти</span>
+      <div class="name rv d1">Галина Журавель</div>
+      <div class="role rv d1">Психологиня, астролог, авторка персональних астрологічних книг</div>
+      <p class="txt rv d2">Поєдную академічну психологію з мовою астрології, щоб дати батькам не передбачення, а <b>практичний інструмент розуміння дитини.</b> Працюю з дитячими натальними картами й сімейною динамікою в межах підходу свідомого батьківства.</p>
+      <p class="txt rv d2"><b>Кожну карту читаю особисто!</b> Це та сама увага до деталей, яку я вкладаю у власну книгу й консультації.</p>
+      <a class="iglink rv d3" href="https://www.instagram.com/psy.astro_zhuravel" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg>
+        @psy.astro_zhuravel
+      </a>
     </div>
   </div>
 </section>
@@ -567,22 +556,27 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
   </div>
 </section>
 
-<!-- ===== АВТОРКА ===== -->
-<section class="sec author" id="author">
+<!-- ===== ТРИ СИТУАЦІЇ (блок 5) ===== -->
+<section class="sec sit">
   <div class="wrap">
-    <div class="aframe rv">
-      <div class="aphoto"><img src="{{IMG_AUTHOR}}" alt="Галина Журавель" width="1000" height="1250" loading="lazy"></div>
-    </div>
-    <div class="author-text">
-      <span class="eyebrow rv">Автор карти</span>
-      <div class="name rv d1">Галина Журавель</div>
-      <div class="role rv d1">Психологиня, астролог, авторка персональних астрологічних книг</div>
-      <p class="txt rv d2">Поєдную академічну психологію з мовою астрології, щоб дати батькам не передбачення, а <b>практичний інструмент розуміння дитини.</b> Працюю з дитячими натальними картами й сімейною динамікою в межах підходу свідомого батьківства.</p>
-      <p class="txt rv d2"><b>Кожну карту читаю особисто!</b> Це та сама увага до деталей, яку я вкладаю у власну книгу й консультації.</p>
-      <a class="iglink rv d3" href="https://www.instagram.com/psy.astro_zhuravel" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg>
-        @psy.astro_zhuravel
-      </a>
+    <span class="eyebrow rv">Впізнаєте себе?</span>
+    <h2 class="rv d1"><b>Три ситуації,</b> які повторюються з&nbsp;року в&nbsp;рік</h2>
+    <div class="cards">
+      <article class="card rv">
+        <div class="num">01</div>
+        <h3>Гурток за гуртком, а іскри немає</h3>
+        <p>За рік три різні секції. Щоразу «нецікаво», «не хочу», сльози перед заняттям. Проблема не в гуртках, а в тому, що ви обираєте навмання.</p>
+      </article>
+      <article class="card rv d1">
+        <div class="num">02</div>
+        <h3>Конфлікти, яких ви не розумієте</h3>
+        <p>Вчителька скаржиться, однокласники дратують, а вдома зовсім інша дитина. Ви губитеся: це вік, характер чи щось глибше?</p>
+      </article>
+      <article class="card rv d2">
+        <div class="num">03</div>
+        <h3>Страх проґавити момент</h3>
+        <p>Десь усередині є відчуття, що у дитини є талант, якого ви поки не бачите.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -646,7 +640,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 <footer class="ftr">
   <div class="wrap">
     <div class="top">
-      <a class="logo" href="#top">ASTRO<span>школа</span></a>
+      <a class="logo" href="#top"><small>Astrolog</small>Halyna Zhuravel</a>
       <a class="iglink" style="margin:0" href="https://www.instagram.com/psy.astro_zhuravel" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg>
         @psy.astro_zhuravel

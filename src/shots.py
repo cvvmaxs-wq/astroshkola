@@ -6,7 +6,7 @@ from PIL import Image
 
 URL = sys.argv[1] if len(sys.argv) > 1 else "file:///E:/astroo/index.html"
 OUT = pathlib.Path(r"E:\astroo\screens"); OUT.mkdir(exist_ok=True)
-NAMES = ["01-hero","02-questions","03-situations","04-inside","05-doubts","06-price","07-author","08-faq","09-final","10-footer"]
+NAMES = ["01-hero","02-questions","03-author","04-inside","05-doubts","06-price","07-situations","08-faq","09-final","10-footer"]
 
 def settle(page):
     page.wait_for_load_state("networkidle")
