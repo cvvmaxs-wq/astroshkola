@@ -9,5 +9,5 @@
 - `src/shots.py` — скріншоти по секціях (Playwright + Edge)
 
 ## Оплата і заявки
-- `PAYMENT_URL` у `<script>` внизу `index.html`/`template.html` — посилання на оплату monobank (790 грн). Порожнє = заглушка після заявки.
+- `PAY_API` у `<script>` внизу `index.html`/`template.html` — URL Cloudflare Worker (`worker/`), який створює рахунок monobank на 790 грн. Порожнє = заглушка після заявки.
 - Заявки з форми йдуть на `psy.astro.zhuravel@gmail.com` через formsubmit.co (`FORM_URL`). Перша заявка надсилає лист-активацію — треба натиснути Activate.

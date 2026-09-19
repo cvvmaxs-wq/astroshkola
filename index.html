@@ -711,8 +711,9 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 
 <script>
 (function(){
-  // ---- Оплата: посилання на оплату monobank (790 грн). Поки порожнє — після заявки показується заглушка.
-  var PAYMENT_URL = "";
+  // ---- Оплата: Cloudflare Worker (worker/worker.js) створює рахунок monobank на 790 грн і повертає pageUrl.
+  // Поки порожнє — після заявки показується заглушка.
+  var PAY_API = "";
   // ---- Заявки надсилаються на пошту через formsubmit.co (перший лист — активація адреси, натиснути Activate).
   var FORM_URL = "https://formsubmit.co/ajax/psy.astro.zhuravel@gmail.com";
 
@@ -744,11 +745,14 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
       "Згода з офертою":"так",
       _subject:"Нова заявка: карта дитини — "+fd.get('child'),_template:"table",_captcha:"false",_replyto:fd.get('email')
     };
+    var order={parent:fd.get('parent'),email:fd.get('email'),telegram:fd.get('telegram'),child:fd.get('child'),date:fd.get('date'),time:fd.get('time'),place:fd.get('place')};
     form.classList.remove('failed');btn.disabled=true;btn.textContent='Надсилаємо…';
-    fetch(FORM_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
-      .then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})
-      .then(function(){
-        if(PAYMENT_URL){window.location.href=PAYMENT_URL;return}
+    var post=function(url,payload){return fetch(url,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})};
+    // 1) заявка на пошту; 2) рахунок mono (якщо підключено) — паралельно
+    Promise.all([post(FORM_URL,data), PAY_API?post(PAY_API+'/invoice',order):null])
+      .then(function(res){
+        var inv=res[1];
+        if(inv&&inv.pageUrl){btn.textContent='Переходимо до оплати…';window.location.href=inv.pageUrl;return}
         modal.classList.add('sent');
       })
       .catch(function(){form.classList.add('failed');btn.disabled=false;btn.textContent=label});

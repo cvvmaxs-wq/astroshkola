@@ -1,0 +1,5 @@
+name = "astroshkola-pay"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+workers_dev = true
+# Секрет: npx wrangler secret put MONO_TOKEN   (у файл не писати)
