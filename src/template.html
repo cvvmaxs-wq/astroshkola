@@ -713,7 +713,7 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 (function(){
   // ---- Оплата: Cloudflare Worker (worker/worker.js) створює рахунок monobank на 790 грн і повертає pageUrl.
   // Поки порожнє — після заявки показується заглушка.
-  var PAY_API = "";
+  var PAY_API = "https://astroshkola-pay.astroshkola.workers.dev";
   // ---- Заявки надсилаються на пошту через formsubmit.co (перший лист — активація адреси, натиснути Activate).
   var FORM_URL = "https://formsubmit.co/ajax/psy.astro.zhuravel@gmail.com";
 
