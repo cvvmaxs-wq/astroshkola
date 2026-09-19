@@ -292,7 +292,8 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 .ftr .top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid var(--line)}
 .ftr .legal{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px 40px;font-size:13.5px;color:var(--muted);line-height:1.6}
 .ftr .legal h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--ink-2);margin-bottom:6px}
-.ftr .ph{background:#FFF3CC;color:#7A5A00;padding:0 5px;border-radius:4px;font-weight:500}
+.ftr .legal a{color:var(--ink-2);text-decoration:underline;text-decoration-color:rgba(27,38,49,.3);text-underline-offset:2px}
+.ftr .legal a:hover{color:var(--amber)}
 .ftr .copy{margin-top:26px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 @media (max-width:720px){.ftr .legal{grid-template-columns:1fr}}
 
@@ -322,6 +323,12 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 .f input:focus{border-color:var(--sky-3);box-shadow:0 0 0 4px rgba(175,198,221,.35)}
 .form .btn{grid-column:1/-1;margin-top:6px;padding:17px}
 .form .fine{grid-column:1/-1;font-size:12.5px;color:var(--muted);text-align:center;line-height:1.5}
+.chk{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.45;color:var(--ink-2);cursor:pointer;margin-top:4px}
+.chk input{margin-top:3px;width:16px;height:16px;flex:none;accent-color:var(--teal)}
+.chk a{color:var(--amber);text-decoration:underline;text-underline-offset:2px}
+.form .err{grid-column:1/-1;display:none;font-size:14px;color:#A33A2E;text-align:center;line-height:1.5}
+.form.failed .err{display:block}
+.form button[disabled]{opacity:.6;cursor:wait}
 .done{display:none;text-align:center;padding:24px 0 8px}
 .done .s{font-size:44px;color:var(--gold-3)}
 .done h3{margin-top:10px}
@@ -647,17 +654,23 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
         @psy.astro_zhuravel
       </a>
     </div>
-    <!-- Публічна інформація: обов'язково для модерації платіжної системи. Дані заповнити реальними. -->
-    <div class="legal">
+    <!-- Публічна інформація: обов'язково для модерації платіжної системи -->
+    <div class="legal" id="legal">
       <div>
         <h4>Продавець</h4>
-        <span class="ph">[ФОП Прізвище Ім'я По батькові]</span><br>
-        РНОКПП: <span class="ph">[0000000000]</span><br>
-        <span class="ph">[адреса]</span> · <span class="ph">[телефон]</span> · <span class="ph">[email]</span>
+        ФОП Журавель Галина Миколаївна<br>
+        РНОКПП: 3260414187<br>
+        м. Київ, пр. С. Бандери, 16<br>
+        <a href="tel:+380980212815">+380 98 021 28 15</a> · <a href="mailto:psy.astro.zhuravel@gmail.com">psy.astro.zhuravel@gmail.com</a><br>
+        Telegram: <a href="https://t.me/zhuravelhalyna" target="_blank" rel="noopener">@zhuravelhalyna</a>
+        <h4 style="margin-top:18px">Документи</h4>
+        <a href="oferta.html">Публічний договір (оферта)</a>
       </div>
       <div>
-        <h4>Послуга та умови</h4>
-        Персональна астрологічна карта дитини у форматі PDF (до 20 сторінок). Надсилається на email, вказаний при замовленні, протягом 24 годин після оплати. Оплата карткою Visa/Mastercard. Повернення коштів: <span class="ph">[умови повернення]</span>.
+        <h4>Послуга та порядок надання</h4>
+        Персональна астрологічна карта дитини у форматі PDF (до 20 сторінок) — цифровий продукт. Вартість 790 грн, повна передоплата карткою онлайн (Visa/Mastercard, Apple Pay, Google Pay). Після оплати та отримання даних (дата, точний час і місце народження дитини) PDF надсилається на email, вказаний при замовленні, протягом 24 годин. Послуга вважається наданою з моменту надсилання файлу.
+        <h4 style="margin-top:18px">Повернення коштів</h4>
+        Повернення коштів можливе до початку надання послуги, тобто до надсилання PDF-карти на пошту; після цього послугу вважають наданою, і кошти не повертаються. Для повернення напишіть на <a href="mailto:psy.astro.zhuravel@gmail.com">psy.astro.zhuravel@gmail.com</a>: кошти надійдуть на картку, з якої здійснено оплату, протягом 14 календарних днів. Детальні умови — у <a href="oferta.html">публічній оферті</a>.
       </div>
     </div>
     <div class="copy">
@@ -682,13 +695,15 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
       <div class="f"><label for="cdate">Дата народження</label><input id="cdate" name="date" type="date" required></div>
       <div class="f"><label for="ctime">Точний час народження</label><input id="ctime" name="time" type="time" required></div>
       <div class="f full"><label for="cplace">Місце народження (місто, країна)</label><input id="cplace" name="place" type="text" required></div>
+      <label class="chk"><input type="checkbox" id="agree" required><span>Погоджуюсь з <a href="oferta.html" target="_blank" rel="noopener">умовами публічної оферти</a> та обробкою даних. Прошу розпочати надання послуги до завершення строку на відмову й усвідомлюю, що після надсилання PDF право на відмову втрачається.</span></label>
       <button class="btn btn-gold" type="submit">Перейти до оплати — 790 грн</button>
-      <div class="fine">Натискаючи кнопку, ви погоджуєтесь з умовами надання послуги.</div>
+      <div class="err">Не вдалося надіслати заявку. Спробуйте ще раз або напишіть у Telegram <a href="https://t.me/zhuravelhalyna" target="_blank" rel="noopener">@zhuravelhalyna</a>.</div>
+      <div class="fine">Оплата карткою онлайн. Після оплати PDF прийде на вашу пошту протягом 24 годин.</div>
     </form>
     <div class="done">
       <div class="s">✦</div>
       <h3>Дякуємо!</h3>
-      <p>Тут буде перехід на сторінку оплати. Після оплати карта прийде на вашу пошту протягом 24 годин.</p>
+      <p>Заявку надіслано. Після оплати карта прийде на вашу пошту протягом 24 годин.</p>
       <div class="stub">Заглушка · оплату буде підключено</div>
     </div>
   </div>
@@ -696,8 +711,10 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
 
 <script>
 (function(){
-  // ---- Оплата: заглушка. Коли буде платіжна система — вставити URL сюди і розкоментувати редірект у submit.
+  // ---- Оплата: посилання на оплату monobank (790 грн). Поки порожнє — після заявки показується заглушка.
   var PAYMENT_URL = "";
+  // ---- Заявки надсилаються на пошту через formsubmit.co (перший лист — активація адреси, натиснути Activate).
+  var FORM_URL = "https://formsubmit.co/ajax/psy.astro.zhuravel@gmail.com";
 
   var hdr=document.getElementById('hdr');
   var onScroll=function(){hdr.classList.toggle('solid',window.scrollY>8)};
@@ -720,9 +737,21 @@ h3{font-size:clamp(21px,2.2vw,25px);font-weight:500}
   form.addEventListener('submit',function(e){
     e.preventDefault();
     if(!form.checkValidity()){form.reportValidity();return}
-    // TODO: відправити дані форми (email / Telegram / Google Sheets) перед переходом на оплату
-    if(PAYMENT_URL){window.location.href=PAYMENT_URL;return}
-    modal.classList.add('sent');
+    var btn=form.querySelector('[type=submit]'),label=btn.textContent,fd=new FormData(form);
+    var data={
+      "Ім'я батьків":fd.get('parent'),"Email":fd.get('email'),"Telegram":fd.get('telegram')||'—',
+      "Ім'я дитини":fd.get('child'),"Дата народження":fd.get('date'),"Час народження":fd.get('time'),"Місце народження":fd.get('place'),
+      "Згода з офертою":"так",
+      _subject:"Нова заявка: карта дитини — "+fd.get('child'),_template:"table",_captcha:"false",_replyto:fd.get('email')
+    };
+    form.classList.remove('failed');btn.disabled=true;btn.textContent='Надсилаємо…';
+    fetch(FORM_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})
+      .then(function(){
+        if(PAYMENT_URL){window.location.href=PAYMENT_URL;return}
+        modal.classList.add('sent');
+      })
+      .catch(function(){form.classList.add('failed');btn.disabled=false;btn.textContent=label});
   });
 })();
 </script>
